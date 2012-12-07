@@ -1,0 +1,29 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+	<title>Agendas</title>
+</head>
+<body>{% csrf_token %}
+    <center>
+  <a href="{% url home_secre %}">Regresar a home</a>  
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br/>
+        <input class="button" type="submit" value="crear"/>
+    </form>
+    {% if listas %}
+    	<h1>Listas</h1>
+        <table class="table">
+    	   {% for lista in listas %}
+            <tr class="{% cycle 'odd' 'even' %}"><td class="tablas"><a href="{% url lista lista.pk %}">
+                <article>
+                <div class="derecha">{{ lista.nombre }}</div><div class="izquierda">({{ lista.persona.count }} personas)</div>
+                </article>
+            </a></td></tr>
+                {% endfor %}
+        </table>
+    {% endif %}
+    </center>
+</body>
+</html>

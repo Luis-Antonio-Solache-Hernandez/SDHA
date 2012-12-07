@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% load i18n %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+    <title>Agregar Perfil</title>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}admin/css/widgets.css"/>
+
+<script type="text/javascript">
+    window.__admin_media_prefix__ = "{{ STATIC_URL }}admin/";
+</script>
+<script type="text/javascript" src="/jsi18n/"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}admin/js/core.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}admin/js/jquery.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}admin/js/actions.js"></script>
+{{ form.media }}
+
+</head>
+<body>{% csrf_token %}
+    <center>
+    <a href="{% url home_secre %}" >Regresar a Principal</a>
+    <p>
+    <h3>Completa los datos de {{ username }}<h3>
+    <form method="POST" enctype="multipart/form-data">
+    	<table>
+        {% csrf_token %}
+        {{ form.as_table }}
+        </table>
+        <input class="button" type="submit"/>
+    </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+        <title>Usuarios</title>
+    </head>
+<body>
+    <center>
+    <div class="main">
+            {% if perfils %}
+            <h1>Perfiles</h1>
+            {% for perfil in perfils %}
+            <article>
+                <font size=2> 
+                {{ perfil.user.username }}</a>
+            </article>
+    {% endfor %}
+    {% endif %}
+    </div>
+</center>
+</body>
+</html>

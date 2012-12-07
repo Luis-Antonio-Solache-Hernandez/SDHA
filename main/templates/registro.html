@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+    <title>Registro</title>
+  </head>
+<body>{% csrf_token %}
+  <center>
+  <a href="{% url home_secre %}" >Regresar a home</a> 
+  <p>
+    <form method="POST">
+      <table>
+        {% csrf_token %}
+        {{ form.as_p }}
+        </table>
+        <input class="button" type="submit"/>
+    </form>
+  </center>
+</body>
+</html>

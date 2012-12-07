@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+	<title>Listas</title>
+</head>
+<body>{% csrf_token %}
+	<center>
+	<a href="{% url agenda %}">Agenda</a>
+	<p>
+	<h3>Agregar a <a href="{% url lista lista.pk %}">{{ lista.nombre }}</a></h3>
+	<p>
+	<div class="personas">
+		<table class="table">
+			<thead>
+			<tr>
+				<th scope="col">Usuario</th>
+				<th scope="col">Nombre</th>
+				<th scope="col">Direccion</th>
+				<th scope="col">Correo</th>
+				<th scope="col">Telefono1</th>
+				<th scope="col">Telefono2</th>
+				<th scope="col">Telefono3</th>
+				<th scope="col">Cumpleaños</th>
+				<th scope="col">Eliminar</th>
+			</tr>
+			</thead>
+			<tbody>
+		{% for persona in personas %}
+			<tr class="{% cycle 'odd' 'even' %}">
+				<td>{{ persona.user.username }}</td>
+				<td>{{ persona.nombre }}</td>
+				<td>{{ persona.direccion }}</td>
+				<td>{{ persona.email }}</td>
+				<td>{{ persona.telefono1 }}</td>
+				<td>{{ persona.telefono2 }}</td>
+				<td>{{ persona.telefono3 }}</td>
+				<td>{{ persona.cumpleanios }}</td>
+				<td><form action="/agregar/" method="post">
+                {% csrf_token %}
+                {% csrf_token %}
+                <input type="hidden" name="lista" value="{{ lista.pk }}">
+                <input type="hidden" name="username" value="{{ persona.user.username }}">
+                <input class="bt" type="submit" value="Agregar">
+            </form></td>
+			</tr>
+        {% endfor %}
+        </tbody>
+        </table>
+	</div>
+	</center>
+</body>
+</html>

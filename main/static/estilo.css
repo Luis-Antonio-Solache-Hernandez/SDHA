@@ -1,0 +1,175 @@
+.table {
+  width: 650px;
+  border:1px solid #000000;
+  border-spacing: 0px; }
+
+.table a, .table, tbody, tfoot, tr, th, td {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.table caption {
+  font-size: 1.8em;
+  text-align: left;
+  text-indent: 100px;
+  background: url(images/bg_caption.gif) left top;
+  height: 40px;
+  color: #FFFFFF;
+  border:1px solid #000000; }
+
+.table thead th {
+  background: url(images/bg_th.gif) left;
+  height: 21px;
+  color: #FFFFFF;
+  font-size: 0.8em;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 0px 7px;
+  margin: 20px 0px 0px;
+  text-align: left; }
+
+.table tbody tr {  background: #ffffff; }
+
+.table tbody tr.odd {  background: #f0f0f0; }
+
+.table tbody th {
+  background: url(images/arrow_white.gif) left center no-repeat;
+  background-position: 5px;
+  padding-left: 40px !important; }
+
+.table tbody tr.odd th {
+  background: url(images/arrow_grey.gif) left center no-repeat;
+  background-position: 5px;
+  padding-left: 40px !important; }
+
+.table tbody th, .table tbody td {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  padding: 10px 7px;
+  border-bottom: 1px solid #800000;
+  text-align: left; }
+
+.table tbody a {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none; }
+
+.table tbody a:hover {
+  color: #ffffff;
+  text-decoration: underline; }
+
+.table tbody tr:hover th {
+  background: #800000 url(images/arrow_red.gif) left center no-repeat;
+  background-position: 5px;
+  color: #ffffff; }
+
+.table tbody tr.odd:hover th {
+  background: #000000 url(images/arrow_black.gif) left center no-repeat;
+  background-position: 5px;
+  color: #ffffff; }
+
+.table tbody tr:hover th a, tr.odd:hover th a  {
+     color: #ffffff; }
+
+.table tbody tr:hover td, .table tr:hover td a, .table tr.odd:hover td, .table tr.odd:hover td a {
+  background: #800000;
+  color: #ffffff;  }
+
+.table tbody tr.odd:hover td, .table tr.odd:hover td a{
+  background: #000000;
+  color: #ffffff;  }
+
+.table tfoot th, .table tfoot td {
+  background: #ffffff url(images/bg_footer.gif) repeat-x bottom;
+  font-size: 0.8em;
+  color: #ffffff;
+  height: 21px;
+  }
+.izquierda{
+    font-size: 85%;
+    float:right;
+    margin-top: 8px;
+}
+
+.derecha{
+ float:left;
+ font-size: 140%;
+}
+
+.helptext{
+  display: none;
+}
+
+body{
+	background-image: url("images/fondov.jpg");
+	background-attachment:fixed;
+	font-family: 'Berlin sans', 'Book Antiqua';
+  	font-style: oblique;
+  	font-size: 20px;
+}
+
+.button {
+  margin: 20px;
+  background: #08088A;
+  border: none;
+  color: #ffffff;
+  font: 13px Tahoma, Arial, sans-serif;
+  padding: 15px 60px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #333;
+  letter-spacing: 1px;
+
+  /**** Sombra de texto ****/
+  text-shadow: 0px -1px 0px #333333;
+
+  /**** Bordes redondeados ****/
+  /* W3C */
+  border-radius: 5px;
+  /* Firefox */
+  -moz-border-radius: 5px;
+
+  /**** Degradados ****/
+  /*  Chrome 1-9 and Safari 4-5.0  */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8b8b8b), color-stop(0.5, #707070), color-stop(0.5, #5e5e5e), color-stop(1, #777777));
+  /*  Chrome 10+ Safari 5.1+ Mobile Safari  */
+  background-image: -webkit-linear-gradient(top, #8b8b8b, #707070 50%, #5e5e5e 50%, #777777);
+  /*  Firefox 3.6+  */
+  background-image: -moz-linear-gradient(top, #8b8b8b, #707070 50%, #5e5e5e 50%, #777777);
+  /*  IE 10+  */
+  background-image: -ms-linear-gradient(top, #8b8b8b, #707070 50%, #5e5e5e 50%, #777777);
+  /*  Opera 11.10+  */
+  background-image: -o-linear-gradient(top, #8b8b8b, #707070 50%, #5e5e5e 50%, #777777);
+  /*  W3C  */
+  background-image: linear-gradient(top, #8b8b8b, #707070 50%, #5e5e5e 50%, #777777);
+}
+
+.button:hover {
+  /*  Chrome 1-9 and Safari 4-5.0  */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5d5d5d), color-stop(0.5, #424242), color-stop(0.5, #383838), color-stop(1, #535353));
+  /*  Chrome 10+ Safari 5.1+ Mobile Safari  */
+  background-image: -webkit-linear-gradient(top, #5d5d5d, #424242 50%, #383838 50%, #535353);
+  /*  Firefox 3.6+  */
+  background-image: -moz-linear-gradient(top, #5d5d5d, #424242 50%, #383838 50%, #535353);
+  /*  IE 10+  */
+  background-image: -ms-linear-gradient(top, #5d5d5d, #424242 50%, #383838 50%, #535353);
+  /*  Opera 11.10+  */
+  background-image: -o-linear-gradient(top, #5d5d5d, #424242 50%, #383838 50%, #535353);
+  /*  W3C  */
+  background-image: linear-gradient(top, #5d5d5d, #424242 50%, #383838 50%, #535353);
+}
+.button:active {
+  /*  Chrome 1-9 and Safari 4-5.0  */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000), color-stop(0.05, #2b2b2b), color-stop(0.5, #434343), color-stop(1, #3e3e3e));
+  /*  Chrome 10+ Safari 5.1+ Mobile Safari  */
+  background-image: -webkit-linear-gradient(top, #000000, #2b2b2b 5%, #434343 50%, #3e3e3e);
+  /*  Firefox 3.6+  */
+  background-image: -moz-linear-gradient(top, #000000, #2b2b2b 5%, #434343 50%, #3e3e3e);
+  /*  IE 10+  */
+  background-image: -ms-linear-gradient(top, #000000, #2b2b2b 5%, #434343 50%, #3e3e3e);
+  /*  Opera 11.10+  */
+  background-image: -o-linear-gradient(top, #000000, #2b2b2b 5%, #434343 50%, #3e3e3e);
+  /*  W3C  */
+  background-image: linear-gradient(top, #000000, #2b2b2b 5%, #434343 50%, #3e3e3e);
+}

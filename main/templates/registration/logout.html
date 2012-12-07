@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+        <meta charset="utf-8"/>
+        <title>Salir</title>
+    </head>
+    <body>
+        <br/><br/><br/>
+        <center>
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="button" type="submit" value="Salir" />
+        </form>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+	<center>
+	</br>
+	<h2>Registrarse</h2>
+</br>
+    <form action="." method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type="submit" value="Registrar" />
+    </form>
+    </center>
+</body>
+</html>

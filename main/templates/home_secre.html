@@ -1,0 +1,23 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+	<title>Sistema Secretaria</title>
+</head>
+<body>{% csrf_token %}
+	<center>
+		<a href="{% url index %}" > Inicio </a>
+	</br>
+	<a href="{% url django.contrib.auth.views.logout %}" > Desloguearse </a>
+	<p>
+	<h1>Sistema administrador</h1>
+	<p>
+	<a href="{% url consultas %}" >Mi Cuenta</a>
+	<br>	
+	<a href="{% url registro %}" >Registrar nuevo Usuario</a>
+	<br>
+	<p><a href="{% url agenda %}">Agenda</a>
+		<br>
+	<p><a href="{% url admin:index %}">Gestion</a>
+	</center>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}estilo.css" />
+	<title>Consultas</title>
+</head>
+<body>{% csrf_token %}
+    <center>
+        {% if request.user.is_staff %}
+  <a href="{% url home_secre %}">Regresar a home</a>
+  {% else %}
+  <a href="{% url index %}">Inicio</a>
+  {% endif %}
+        <h1>Consultas</h1>
+    </br><a href="{% url addcita %}">Solicitar Consulta</a>
+    {% if consultas %}
+        <table class="table">
+    	   {% for consulta in consultas %}
+            <tr class="{% cycle 'odd' 'even' %}"><td class="tablas">
+                <article>
+                <div class="derecha">{{ consulta.tpx.nombre }}</div><div class="izquierda">({{ consulta.fecha_hora }} personas)</div>
+                </article>
+            </td></tr>
+                {% endfor %}
+        </table>
+    {% endif %}
+    </center>
+</body>
+</html>
